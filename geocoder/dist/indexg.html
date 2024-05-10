@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BCRM Geocoder</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="./styleg.css">
+
+</head>
+
+<body>
+  <div id="map-container">
+    <div id="map" class="map"></div>
+  </div>
+  <div id="showBar" class="center" style="display:none">
+    <button id="myT" class="center" onmousedown="showBar()">SHOW</button>
+  </div>
+
+  <div id="controlBar" class="center">
+    <div id="instructions">
+      <button id="myT" class="center" onmousedown="hideBar()">HIDE</button>
+
+      <!-- <form action="/action_page.php"> -->
+
+      <label for="title">Address:</label>
+      <p>
+        <textarea style="background-color: rgba(69, 68, 68, 0.466); width: 270px" id="title" name="title"></textarea>
+
+
+      <p>
+        <label for="lat">Latitude:</label>
+        <input type="text" style="background-color: rgba(69, 68, 68, 0.466);" id="lat" name="lat">
+        <span></span>
+        <label for="lon">Longitude:</label>
+        <input type="text" style="background-color: rgba(69, 68, 68, 0.466);" id="lon" name="lon">
+        <span></span>
+
+        <label for="media">Add Media:</label>
+      <div id="controlBar">
+        <input type="file" style="background-color: #45444477; width: 270px;" id="fileToLoad"><br>
+        <div id="inputTextToSave" style="background-color: #45444477;"></div>
+        <div id="fileToLoad"></div>
+
+        <label for="summary">Summary:</label>
+        <p>
+          <textarea name="summary" id="summary" style="width: 200px; background-color: #45444477;"
+            name="summary">Enter text here. . . </textarea>
+          <br>
+
+          <button type="button" id="button" class="center" onclick="submitForm()">ADD LOCATION</button>
+          </form>
+
+          <label for="media">Damage Locations:</label>
+          </textarea>
+          <textarea name="litterLocation" id="litterLocation" name="litterLocation"
+            style="background-color: rgba(69, 68, 68, 0.466); width: 270px;"></textarea>
+          <br>
+          <button type="button" id="button" class="center" style="width: 170px;" onclick="submitForm()">SUBMIT
+            LOCATIONS</button>
+          <a href="../../dist/index.html">
+            <button id="homeb">HOME</button>
+          </a>
+      </div>
+      <!-- <div id = "showBar" class="center"   style="display:none">
+  <button id="myT"  class="center"  onmousedown="showBar()">SHOW</button>
+  </div>
+</div> -->
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.3/leaflet.js'></script>
+      <script src="./scriptg.js"></script>
+
+</body>
+
+</html>
